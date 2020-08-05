@@ -9,9 +9,7 @@ const startEven = () => {
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('Your answer:');
     let result = '';
-    if (userAnswer !== 'yes' || userAnswer !== 'no') {
-      result = 'Use only "yes" or "no" answers!';
-    } else if (number % 2 === 0) {
+    if (number % 2 === 0) {
       if (userAnswer === 'yes') {
         result = 'Correct!';
       } else {
@@ -28,6 +26,8 @@ const startEven = () => {
     if (result === 'Correct!' && questionsCount > 0) {
       questionsCount -= 1;
       question(name);
+    } else if (result === 'Correct!' && questionsCount === 0) {
+      console.log(`Congratulations, ${name}!`);
     } else {
       console.log(`Let's try again, ${name}!`);
     }
