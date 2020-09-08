@@ -2,14 +2,13 @@
 
 import * as myModule from '../src/index.js';
 
-const startCalc = () => {
+const startGcd = () => {
   let questionsCount = 2;
   const calculation = (name) => {
     const firstNumber = myModule.randomNumber();
     const secondNumber = myModule.randomNumber();
-    const action = myModule.randomAction();
-    console.log(`Question: ${firstNumber} ${action} ${secondNumber}`);
-    const rightResult = myModule.calculationMethod(firstNumber, secondNumber, action);
+    console.log(`Question: ${firstNumber} ${secondNumber}`);
+    const rightResult = myModule.gcdMethod(firstNumber, secondNumber);
     const userAnswer = myModule.askSomething('Your answer:');
     const result = myModule.checkAnswer(rightResult, userAnswer);
     console.log(result);
@@ -25,10 +24,10 @@ const startCalc = () => {
   console.log('Welcome to the Brain Games!');
   const userName = myModule.askSomething('May I have your name? ');
   console.log(`Hello, ${userName} !`);
-  console.log('What is the result of the expression?');
+  console.log('Find the greatest common divisor of given numbers.');
   calculation(userName);
 };
 
-startCalc();
+startGcd();
 
-export default startCalc;
+export default startGcd;

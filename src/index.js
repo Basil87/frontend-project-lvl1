@@ -28,6 +28,15 @@ export const calculationMethod = (a, b, action) => {
   return a * b;
 };
 
+export const gcdMethod = (a, b) => {
+  if (b > 0) {
+    const k = a % b;
+    return gcdMethod(b, k);
+  }
+
+  return Math.abs(a);
+};
+
 export const checkEven = (number, userAnswer) => {
   let result = '';
   if (number % 2 === 0) {
@@ -46,7 +55,7 @@ export const checkEven = (number, userAnswer) => {
   return result;
 };
 
-export const checkCalc = (rightResult, result) => {
+export const checkAnswer = (rightResult, result) => {
   if (rightResult === +result) {
     return 'Correct!';
   }
