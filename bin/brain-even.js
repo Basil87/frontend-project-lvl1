@@ -1,27 +1,13 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import * as myModule from '../src/index';
 
 const startEven = () => {
-  const randomNumber = () => Math.floor(Math.random() * 100);
   let questionsCount = 2;
   const question = (name) => {
-    const number = randomNumber();
+    const number = myModule.randomNumber();
     console.log(`Question: ${number}`);
-    const userAnswer = readlineSync.question('Your answer:');
-    let result = '';
-    if (number % 2 === 0) {
-      if (userAnswer === 'yes') {
-        result = 'Correct!';
-      } else {
-        result = '"no" is wrong answer ;(. Correct answer was "yes".';
-      }
-    } else if (number % 2 !== 0) {
-      if (userAnswer === 'no') {
-        result = 'Correct!';
-      } else {
-        result = '"no" is wrong answer ;(. Correct answer was "yes".';
-      }
-    }
+    const userAnswer = myModule.askSomething('Your answer:');
+    const result = myModule.checkEven(number, userAnswer);
     console.log(result);
     if (result === 'Correct!' && questionsCount > 0) {
       questionsCount -= 1;
@@ -33,7 +19,7 @@ const startEven = () => {
     }
   };
   console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
+  const userName = myModule.askSomething('May I have your name? ');
   console.log(`Hi ${userName} !`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   question(userName);
