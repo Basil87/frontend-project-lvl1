@@ -2,7 +2,9 @@ import readlineSync from 'readline-sync';
 
 export const askSomething = (question) => readlineSync.question(question);
 
-export const randomNumber = () => Math.floor(Math.random() * 10);
+export const randomNumber = (count = 100) => Math.floor(Math.random() * count);
+
+export const questionsCount = 2;
 
 export const randomAction = () => {
   const number = Math.floor(Math.random() * 3);
