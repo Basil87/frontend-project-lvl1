@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import * as myModule from '../src/index';
+import * as myModule from '../src/index.js';
 
 const startEven = () => {
   let questionsCount = 2;

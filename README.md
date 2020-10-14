@@ -4,8 +4,10 @@
 
 [![Node CI](https://github.com/Basil87/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com//Basil87/frontend-project-lvl1//actions)
 
-https://asciinema.org/a/fIeyet2Eu5KghSDesXHFjjbFN
+https://asciinema.org/connect/f426f2d6-767e-4c36-af1e-3ed0b70cdc2b
 
-https://asciinema.org/a/e8rKhVxIBfYxQmsuUrq4vIgXq
+https://asciinema.org/connect/f426f2d6-767e-4c36-af1e-3ed0b70cdc2b
 
-https://asciinema.org/a/KcZBY6FpQ7ELaJIwifgUpDqIm
+https://asciinema.org/connect/f426f2d6-767e-4c36-af1e-3ed0b70cdc2b
+
+https://asciinema.org/connect/f426f2d6-767e-4c36-af1e-3ed0b70cdc2b

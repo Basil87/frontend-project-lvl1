@@ -29,7 +29,7 @@ const startPrime = () => {
   console.log('Welcome to the Brain Games!');
   const userName = myModule.askSomething('May I have your name? ');
   console.log(`Hello, ${userName} !`);
-  console.log('What is the result of the expression?');
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   calculation(userName);
 };
 
