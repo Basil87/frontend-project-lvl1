@@ -64,3 +64,12 @@ export const checkAnswer = (rightResult, result) => {
 
   return 'WRONG!!!';
 };
+
+export const isPrime = (number) => {
+  let start = 2;
+  while (start <= Math.sqrt(number)) {
+    if (number % start < 1) return 'no';
+    start += 1;
+  }
+  return 'yes';
+};
